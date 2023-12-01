@@ -1,0 +1,63 @@
+Claro, vou adicionar alguns estilos básicos ao código HTML da página sobre os lugares turísticos e meus lugares favoritos na cidade fictícia. Vamos lá:
+
+**Página anterior (ponto_turistico.html):**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Descubra um ponto turístico incrível na cidade fictícia.">
+  <title>Ponto Turístico na Cidade Fictícia</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section {
+      margin: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="margin: 0;">Bem-vindo ao Ponto Turístico na Cidade Fictícia</h1>
+  </header>
+
+  <section>
+    <h2 style="color: #2e74b5;">Parque da Imaginação</h2>
+    <p>O Parque da Imaginação é o lugar perfeito para explorar a magia e a criatividade. Localizado no coração da cidade fictícia, oferece uma experiência única para visitantes de todas as idades.</p>
+    <img src="parque.jpg" alt="Parque da Imaginação">
+  </section>
+
+  <section>
+    <h2 style="color: #2e74b5;">Meus Lugares Favoritos</h2>
+    <p>Descubra os lugares que mais gosto de frequentar na cidade fictícia. <a href="lugares_favoritos.html" style="color: #333; text-decoration: none; font-weight: bold;">Saiba mais!</a></p>
+  </section>
+
+  <footer>
+    <p style="margin: 0;">&copy; 2023 Cidade Fictícia - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+```
