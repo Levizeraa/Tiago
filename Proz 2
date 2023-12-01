@@ -1,0 +1,63 @@
+Claro, vou criar um esboço simples do corpo de uma página HTML sobre lugares turísticos na Europa. Lembre-se de que este é apenas um exemplo básico, e você pode personalizá-lo conforme necessário.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Descubra lugares turísticos incríveis na Europa.">
+  <title>Lugares Turísticos na Europa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #2e74b5;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      width: 300px;
+      float: left;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lugares Turísticos na Europa</h1>
+
+  <div class="card">
+    <img src="paris.jpg" alt="Torre Eiffel em Paris">
+    <h2>Paris, França</h2>
+    <p>Explore a cidade do amor, com a majestosa Torre Eiffel, o Louvre e encantadoras ruas de paralelepípedos.</p>
+  </div>
+
+  <div class="card">
+    <img src="santorini.jpg" alt="Pôr do sol em Santorini">
+    <h2>Santorini, Grécia</h2>
+    <p>Desfrute de vistas deslumbrantes do mar Egeu, arquitetura única e pores do sol inesquecíveis em Santorini.</p>
+  </div>
+
+  <div class="card">
+    <img src="roma.jpg" alt="Coliseu em Roma">
+    <h2>Roma, Itália</h2>
+    <p>Descubra a história em cada esquina, com o Coliseu, o Pantheon e os magníficos museus de Roma.</p>
+  </div>
+
+  <!-- Adicione mais cards conforme necessário -->
+
+</body>
+</html>
+```
+
+Lembre-se de substituir os nomes das imagens (`paris.jpg`, `santorini.jpg`, `roma.jpg`, etc.) pelos caminhos corretos das suas imagens. Este é apenas um exemplo básico para começar, e você pode expandir e personalizar conforme desejar.
