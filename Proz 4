@@ -1,0 +1,114 @@
+Ótimo! Vamos criar uma nova página que fala sobre os lugares que eu mais gosto de frequentar na minha cidade fictícia. Além disso, vou adicionar um link na página anterior para direcionar para esta nova. Vamos lá:
+
+**Página anterior (ponto_turistico.html):**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Descubra um ponto turístico incrível na cidade fictícia.">
+  <title>Ponto Turístico na Cidade Fictícia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo ao Ponto Turístico na Cidade Fictícia</h1>
+  </header>
+
+  <section>
+    <h2>Parque da Imaginação</h2>
+    <p>O Parque da Imaginação é o lugar perfeito para explorar a magia e a criatividade. Localizado no coração da cidade fictícia, oferece uma experiência única para visitantes de todas as idades.</p>
+    <img src="parque.jpg" alt="Parque da Imaginação">
+  </section>
+
+  <section>
+    <h2>Meus Lugares Favoritos</h2>
+    <p>Descubra os lugares que mais gosto de frequentar na cidade fictícia. <a href="lugares_favoritos.html">Saiba mais!</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Cidade Fictícia - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+```
+
+**Nova página (lugares_favoritos.html):**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Conheça os lugares favoritos na cidade fictícia.">
+  <title>Meus Lugares Favoritos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meus Lugares Favoritos na Cidade Fictícia</h1>
+  </header>
+
+  <section>
+    <h2>Café da Imaginação</h2>
+    <p>O Café da Imaginação é o meu refúgio, com ambiente acolhedor e deliciosos cafés. É o lugar perfeito para relaxar e estimular a criatividade.</p>
+    <img src="cafe.jpg" alt="Café da Imaginação">
+  </section>
+
+  <section>
+    <h2>Biblioteca Literária</h2>
+    <p>A Biblioteca Literária é um tesouro de conhecimento, com uma vasta coleção de livros. Passo horas explorando suas estantes em busca de novas histórias.</p>
+    <img src="biblioteca.jpg" alt="Biblioteca Literária">
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Cidade Fictícia - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+```
