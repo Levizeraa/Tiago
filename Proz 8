@@ -1,0 +1,22 @@
+Claro, vou te guiar através da modificação do código `src/App.js` para exibir o seu nome ao abrir o aplicativo React. Abra o arquivo `src/App.js` em seu editor de código e substitua o conteúdo pelo seguinte:
+
+```jsx
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Olá! Meu nome é [Seu Nome].
+        </p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Certifique-se de substituir `[Seu Nome]` pelo seu nome real. Salve o arquivo e, se o servidor de desenvolvimento ainda estiver em execução, ele recarregará automaticamente as alterações e você verá o seu nome ao acessar http://localhost:3000/. Se não estiver em execução, você pode reiniciar o servidor usando o comando `npm start` no terminal.
