@@ -1,0 +1,51 @@
+Ah, uma página sobre um ponto turístico na minha cidade fictícia, que tal? Vamos lá:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Descubra um ponto turístico incrível na cidade fictícia.">
+  <title>Ponto Turístico na Cidade Fictícia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo ao Ponto Turístico na Cidade Fictícia</h1>
+  </header>
+
+  <section>
+    <h2>Parque da Imaginação</h2>
+    <p>O Parque da Imaginação é o lugar perfeito para explorar a magia e a criatividade. Localizado no coração da cidade fictícia, oferece uma experiência única para visitantes de todas as idades.</p>
+    <img src="parque.jpg" alt="Parque da Imaginação">
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Cidade Fictícia - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+```
