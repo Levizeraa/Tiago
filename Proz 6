@@ -1,0 +1,52 @@
+Infelizmente, não consigo enviar arquivos diretamente neste formato de conversa. No entanto, vou fornecer um exemplo de como você pode aplicar o modelo Flexbox em um código HTML e CSS básico.
+
+**HTML (index.html):**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flexbox Example</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+
+</body>
+</html>
+```
+
+**CSS (styles.css):**
+```css
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #2e74b5;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 8px;
+  margin: 10px;
+}
+```
