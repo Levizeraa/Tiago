@@ -1,0 +1,52 @@
+Vamos criar uma nova pasta chamada `utils` dentro do diretório `src` e, dentro dela, um arquivo JavaScript chamado `mensagem.js`. Dentro desse arquivo, criaremos uma função que retorna uma mensagem simples. Aqui está o passo a passo:
+
+1. **Crie a pasta `utils` e o arquivo `mensagem.js`:**
+
+    ```bash
+    cd src
+    mkdir utils
+    touch utils/mensagem.js
+    ```
+
+2. **Abra `mensagem.js` no seu editor de código e adicione o seguinte código:**
+
+    ```javascript
+    // utils/mensagem.js
+
+    const obterMensagem = () => {
+      return "Bem-vindo ao meu aplicativo React!";
+    };
+
+    export default obterMensagem;
+    ```
+
+3. **Agora, modifique `src/App.js` para usar a função `obterMensagem`:**
+
+    ```jsx
+    // src/App.js
+    import React from 'react';
+    import './App.css';
+    import obterMensagem from './utils/mensagem';
+
+    function App() {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <p>
+              {obterMensagem()}
+            </p>
+          </header>
+        </div>
+      );
+    }
+
+    export default App;
+    ```
+
+4. **Execute o aplicativo React:**
+
+    Certifique-se de que o servidor de desenvolvimento esteja em execução. Se não estiver, você pode iniciá-lo com o comando `npm start` no terminal.
+
+5. **Acesse http://localhost:3000/ e veja a mensagem gerada pela função.**
+
+Ao abrir o navegador, você verá a mensagem retornada pela função `obterMensagem()` exibida na página. Certifique-se de que o servidor de desenvolvimento esteja em execução para ver as alterações refletidas no navegador.
