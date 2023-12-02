@@ -1,0 +1,33 @@
+Claro, podemos criar um botão simples que aumenta o valor de uma propriedade usando React e hooks. Vamos usar o estado do React para isso. Aqui está um exemplo de como você pode fazer isso:
+
+```jsx
+import React, { useState } from 'react';
+
+const MeuComponente = () => {
+  // Definindo o estado inicial da propriedade
+  const [valor, setValor] = useState(0);
+
+  // Função para aumentar o valor quando o botão for clicado
+  const aumentarValor = () => {
+    setValor(valor + 1);
+  };
+
+  return (
+    <div>
+      <p>Valor atual: {valor}</p>
+      <button onClick={aumentarValor}>Aumentar Valor</button>
+    </div>
+  );
+};
+
+export default MeuComponente;
+```
+
+Neste exemplo:
+
+1. `useState(0)` inicializa o estado `valor` com o valor inicial de 0.
+2. `setValor` é uma função que permite atualizar o estado `valor`.
+3. O componente renderiza um parágrafo exibindo o valor atual e um botão.
+4. Quando o botão é clicado, a função `aumentarValor` é chamada, que utiliza `setValor` para incrementar o valor atual.
+
+Espero que isso ajude!
