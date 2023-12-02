@@ -1,0 +1,48 @@
+Vamos adicionar o uso de `props` ao nosso projeto React. Suponha que queremos passar um título para o componente `Filho` a partir do componente `Pai`. Aqui está um exemplo de como você poderia fazer isso:
+
+1. **Modifique `src/Filho.js` para usar props:**
+
+```jsx
+// src/Filho.js
+import React from 'react';
+
+function Filho(props) {
+  return (
+    <div>
+      <h2>{props.titulo}</h2>
+      <p>Este é um componente filho.</p>
+    </div>
+  );
+}
+
+export default Filho;
+```
+
+2. **Modifique `src/App.js` para passar a propriedade `titulo` para o componente `Filho`:**
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import Filho from './Filho';
+
+function App() {
+  const tituloDoFilho = 'Título do Componente Filho';
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Filho titulo={tituloDoFilho} />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+3. **Execute o aplicativo React:**
+
+Certifique-se de que o servidor de desenvolvimento está em execução usando o comando `npm start`. Abra o navegador e acesse http://localhost:3000/. Você deve ver o título passado como uma propriedade para o componente `Filho`.
+
+Este é um exemplo simples de como usar `props` para passar dados entre componentes React. Você pode adaptar conforme necessário para atender aos requisitos específicos do seu projeto. Se precisar de mais detalhes ou ajustes, estou à disposição!
