@@ -1,0 +1,49 @@
+Para adicionar roteamento entre telas em um projeto React, geralmente, você usaria uma biblioteca como o React Router. Aqui está um exemplo básico de como você pode configurar um componente com roteamento entre duas telas usando o React Router:
+
+```jsx
+// Instale o React Router usando: npm install react-router-dom
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+const TelaInicial = () => {
+  return (
+    <div>
+      <h2>Tela Inicial</h2>
+      <Link to="/outra-tela">Ir para Outra Tela</Link>
+    </div>
+  );
+};
+
+const OutraTela = () => {
+  return (
+    <div>
+      <h2>Outra Tela</h2>
+      <Link to="/">Voltar para Tela Inicial</Link>
+    </div>
+  );
+};
+
+const RoteamentoComponente = () => {
+  return (
+    <Router>
+      <div>
+        <Route path="/" exact component={TelaInicial} />
+        <Route path="/outra-tela" component={OutraTela} />
+      </div>
+    </Router>
+  );
+};
+
+export default RoteamentoComponente;
+```
+
+Neste exemplo:
+
+1. `TelaInicial` é um componente que contém um link para navegar até a outra tela.
+2. `OutraTela` é um componente com um link para voltar para a tela inicial.
+3. `RoteamentoComponente` é o componente principal que utiliza o `Router` do React Router para envolver as rotas. Ele tem duas rotas definidas usando `<Route>`: uma para a tela inicial e outra para a outra tela.
+
+Lembre-se de instalar o React Router com `npm install react-router-dom` antes de utilizar este código. Certifique-se também de importar corretamente os módulos do React Router no seu projeto.
+
+Espero que isso ajude a implementar roteamento no seu projeto base!
