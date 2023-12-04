@@ -1,0 +1,40 @@
+Em C, você pode realizar essas operações usando as funções `malloc`, `realloc` e `free`. Aqui está um exemplo de como você pode fazer isso:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Cria um ponteiro que indica uma variável do tipo inteiro
+    int *ponteiro;
+
+    // Aloca memória para guardar oito dados do tipo inteiro
+    ponteiro = (int*)malloc(8 * sizeof(int));
+
+    if (ponteiro == NULL) {
+        printf("Erro na alocação de memória.\n");
+        return 1;  // Retorna 1 para indicar erro
+    }
+
+    // Imprime o endereço de memória alocado
+    printf("Endereço de memória alocado: %p\n", (void*)ponteiro);
+
+    // Realoca memória para um tamanho que guarde doze dados inteiros
+    ponteiro = (int*)realloc(ponteiro, 12 * sizeof(int));
+
+    if (ponteiro == NULL) {
+        printf("Erro na realocação de memória.\n");
+        return 1;  // Retorna 1 para indicar erro
+    }
+
+    // Imprime o endereço de memória realocado
+    printf("Endereço de memória realocado: %p\n", (void*)ponteiro);
+
+    // Libera o espaço alocado nas funções anteriores
+    free(ponteiro);
+
+    return 0;  // Retorna 0 para indicar sucesso
+}
+```
+
+Este código cria um ponteiro para um inteiro, aloca inicialmente memória para oito inteiros, realoca memória para doze inteiros e finalmente libera a memória alocada. Certifique-se de incluir os cabeçalhos necessários (`#include <stdio.h>` e `#include <stdlib.h>`) no início do programa.
