@@ -1,0 +1,38 @@
+Vamos criar um tipo abstrato de dados (TAD) em Python para representar o cadastro de animais de estimação. Aqui está um exemplo:
+
+```python
+class AnimalEstimacao:
+    def __init__(self, nome, raca, idade, responsavel, telefone):
+        self.nome = nome
+        self.raca = raca
+        self.idade = idade
+        self.responsavel = responsavel
+        self.telefone = telefone
+
+def cadastrar_animal():
+    # Solicita ao usuário que insira os atributos do animal
+    nome = input("Digite o nome do animal: ")
+    raca = input("Digite a raça do animal: ")
+    idade = input("Digite a idade do animal: ")
+    responsavel = input("Digite o nome do responsável: ")
+    telefone = input("Digite o telefone do responsável: ")
+
+    # Cria um objeto AnimalEstimacao com os atributos fornecidos
+    animal = AnimalEstimacao(nome, raca, idade, responsavel, telefone)
+
+    # Retorna o cadastro do animal de estimação
+    return animal
+
+# Exemplo de uso da função
+animal_cadastrado = cadastrar_animal()
+
+# Exibe os dados cadastrados do animal
+print("\nCadastro do Animal de Estimação:")
+print("Nome:", animal_cadastrado.nome)
+print("Raça:", animal_cadastrado.raca)
+print("Idade:", animal_cadastrado.idade)
+print("Responsável:", animal_cadastrado.responsavel)
+print("Telefone:", animal_cadastrado.telefone)
+```
+
+Neste código, criamos a classe `AnimalEstimacao` para representar os animais de estimação com os atributos especificados. A função `cadastrar_animal` solicita ao usuário que insira os dados do animal pelo teclado, cria um objeto `AnimalEstimacao` com esses dados e retorna o objeto. O exemplo de uso da função mostra como você pode utilizar a função para cadastrar um animal e exibir as informações cadastradas.
