@@ -1,0 +1,90 @@
+Vamos criar árvores binárias de busca para cada uma das listas, adicionar um valor e remover outro. No caso da remoção, garantiremos que em pelo menos uma das árvores o nó a ser removido tenha dois filhos.
+
+Vamos usar a biblioteca `binarytree` para criar e visualizar as árvores em Python.
+
+```python
+from binarytree import build, Node
+
+# Função para adicionar um valor à árvore
+def adicionar_valor(arvore, valor):
+    if not arvore:
+        return Node(valor)
+    elif valor < arvore.value:
+        arvore.left = adicionar_valor(arvore.left, valor)
+    else:
+        arvore.right = adicionar_valor(arvore.right, valor)
+    return arvore
+
+# Função para encontrar o nó com dois filhos na árvore
+def encontrar_no_dois_filhos(arvore):
+    if arvore is None:
+        return None
+
+    if arvore.left is not None and arvore.right is not None:
+        return arvore
+
+    no_esquerda = encontrar_no_dois_filhos(arvore.left)
+    no_direita = encontrar_no_dois_filhos(arvore.right)
+
+    return no_esquerda or no_direita
+
+# Função para remover um nó da árvore
+def remover_valor(arvore, valor):
+    if arvore is None:
+        return arvore
+
+    if valor < arvore.value:
+        arvore.left = remover_valor(arvore.left, valor)
+    elif valor > arvore.value:
+        arvore.right = remover_valor(arvore.right, valor)
+    else:
+        # Caso 1: Nó sem filhos ou com apenas um filho
+        if arvore.left is None:
+            return arvore.right
+        elif arvore.right is None:
+            return arvore.left
+
+        # Caso 2: Nó com dois filhos
+        no_sucessor = encontrar_no_dois_filhos(arvore.right)
+        arvore.value = no_sucessor.value
+        arvore.right = remover_valor(arvore.right, no_sucessor.value)
+
+    return arvore
+
+# Lista1
+lista1 = [45, 20, 30, 60, 81, 97, 100, 7, 8, 4]
+
+# Criando a árvore para Lista1
+arvore_lista1 = build(lista1)
+
+# Adicionando um valor à árvore Lista1
+valor_adicionar_lista1 = 50
+arvore_lista1 = adicionar_valor(arvore_lista1, valor_adicionar_lista1)
+
+# Removendo um valor da árvore Lista1
+valor_remover_lista1 = 60
+arvore_lista1 = remover_valor(arvore_lista1, valor_remover_lista1)
+
+# Lista2
+lista2 = [15, 6, 18, 3, 7, 16, 20, 4]
+
+# Criando a árvore para Lista2
+arvore_lista2 = build(lista2)
+
+# Adicionando um valor à árvore Lista2
+valor_adicionar_lista2 = 25
+arvore_lista2 = adicionar_valor(arvore_lista2, valor_adicionar_lista2)
+
+# Removendo um valor da árvore Lista2
+valor_remover_lista2 = 18
+arvore_lista2 = remover_valor(arvore_lista2, valor_remover_lista2)
+
+# Visualizando as árvores
+print("Árvore Lista1:")
+print(arvore_lista1)
+
+print("\nÁrvore Lista2:")
+print(arvore_lista2)
+```
+
+Neste código, criamos árvores binárias de busca para as listas fornecidas, adicionamos um valor a cada árvore e removemos um valor, garantindo que em pelo menos uma das árvores a remoção seja de um nó com dois filhos.
