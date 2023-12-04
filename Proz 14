@@ -1,0 +1,23 @@
+Claro, vou criar um algoritmo de ordenação usando o método Insertion Sort em Python. Neste caso, o vetor terá tamanho 30, conterá números ímpares e será ordenado em ordem crescente.
+
+```python
+def insertion_sort(vetor):
+    for i in range(1, len(vetor)):
+        chave = vetor[i]
+        j = i - 1
+        while j >= 0 and chave < vetor[j]:
+            vetor[j + 1] = vetor[j]
+            j -= 1
+        vetor[j + 1] = chave
+
+# Criando um vetor com 30 números ímpares
+vetor = [9, 15, 7, 23, 13, 31, 3, 17, 5, 27, 11, 21, 19, 1, 29, 25, 33, 37, 35, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+
+# Chama a função insertion_sort para ordenar o vetor
+insertion_sort(vetor)
+
+# Exibe o vetor ordenado
+print("Vetor ordenado:", vetor)
+```
+
+O algoritmo de Insertion Sort funciona construindo uma sequência ordenada de elementos um de cada vez. Ele percorre o vetor, compara elementos adjacentes e insere o elemento atual na posição correta na sequência ordenada.
