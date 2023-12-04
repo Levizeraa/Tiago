@@ -1,0 +1,36 @@
+Vamos lá! Vou te mostrar passo a passo o algoritmo de ordenação Bubble Sort em Python:
+
+```python
+def bubble_sort(vetor):
+    n = len(vetor)
+    
+    # Flag para verificar se houve alguma troca no passo anterior
+    troca = True
+    
+    while troca:
+        # Inicializa a flag de troca como False no início de cada iteração
+        troca = False
+        
+        # Percorre o vetor até o penúltimo elemento
+        for i in range(n - 1):
+            # Compara os elementos adjacentes
+            if vetor[i] > vetor[i + 1]:
+                # Troca os elementos se estiverem fora de ordem
+                vetor[i], vetor[i + 1] = vetor[i + 1], vetor[i]
+                # Atualiza a flag de troca para indicar que houve uma troca
+                troca = True
+        
+        # Ao final de cada iteração, o maior elemento estará na posição correta, então reduz o tamanho do vetor
+        n -= 1
+
+# Vetor inicial
+vetor = [9, 5, 7, 2, 6, 1, 3, 0, 4, 8]
+
+# Chama a função bubble_sort para ordenar o vetor
+bubble_sort(vetor)
+
+# Exibe o vetor ordenado
+print("Vetor ordenado:", vetor)
+```
+
+A ideia principal do Bubble Sort é percorrer o vetor várias vezes, comparando elementos adjacentes e trocando-os se estiverem fora de ordem. O processo é repetido até que nenhuma troca seja necessária em uma iteração completa, o que indica que o vetor está ordenado.
